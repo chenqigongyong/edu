@@ -6,7 +6,7 @@ from courses.models import CourseInfo, LessonInfo, VideoInfo, SourceInfo
 
 @xadmin.sites.register(CourseInfo)
 class CourseInfoXadmin(object):
-    list_display = ['iamge','name','study_time','study_num','level','love_num','click_num','desc','detail','category','cource_notice','cource_need','teacher_tell','orginfo','teacherinfo','add_time']
+    list_display = ['iamge','name','study_time','study_num','level','love_num','click_num','orginfo','teacherinfo','add_time']
 
 @xadmin.sites.register(LessonInfo)
 class LessonInfoXadmin(object):

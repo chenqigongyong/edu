@@ -3,6 +3,20 @@
 # Register your models here.
 import xadmin
 from .models import BannerInfo, EmailVerifyCode
+from xadmin import views
+
+#配置xadmin主题
+@xadmin.sites.register(views.BaseAdminView)
+class BaseXadminSetting(object):
+    enable_themes = True
+    use_bootswatch = True
+
+#页眉、页脚、菜单设置
+@xadmin.sites.register(views.CommAdminView)
+class CommonXamdinSetting(object):
+    site_title = 'xx教育后台管理平台'
+    site_footer = 'xxIT教育'
+    menu_style = 'accordion'
 
 #轮播图表
 @xadmin.sites.register(BannerInfo)
